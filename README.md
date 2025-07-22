@@ -2,8 +2,6 @@
 
 **Ultra-lightweight fine-tuned BLIP model for generating accurate chart captions**
 
-![Model Architecture](docs/architecture.png)  
-
 Visually impaired and blind individuals increasingly rely on image captions and alt text to interpret visual content online. Recent advances in vision–language models (VLMs) offer promising tools for automatic caption generation, but generic, pre-trained models often produce flawed or misleading descriptions—especially for data-heavy visuals like charts. These inaccuracies aren’t just cosmetic; they distort meaning and undermine accessibility. Moreover, state-of-the-art captioning models tend to be large and computationally intensive, limiting their practicality for small-scale or edge use.
 
 This project explores a minimalist fine-tuning strategy for adapting a pre-trained VLM built on top of Salesforce’s [BLIP](https://huggingface.co/Salesforce/blip-image-captioning-base) to generate more accurate, contextually relevant chart captions—using only a small dataset and modest consumer hardware. By aggregating (query, answer) annotations into a single dense caption per chart, we supervise the model to emphasize salient relationships and trends. The result is a compact model that delivers noticeably improved captions with just a few training epochs on a laptop, demonstrating how even lightweight tuning can meaningfully enhance accessibility in real-world settings.
